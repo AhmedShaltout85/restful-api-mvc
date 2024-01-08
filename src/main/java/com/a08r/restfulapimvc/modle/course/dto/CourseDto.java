@@ -1,7 +1,6 @@
-package com.a08r.restfulapimvc.modle.course.dto;
+package com.a08r.restfulapimvc.model.course.dto;
 
 
-import com.a08r.restfulapimvc.modle.course.Course;
 import lombok.*;
 
 

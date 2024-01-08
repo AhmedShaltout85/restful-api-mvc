@@ -1,6 +1,6 @@
 package com.a08r.restfulapimvc.contorllers;
 
-import com.a08r.restfulapimvc.modle.course.dto.CourseDto;
+import com.a08r.restfulapimvc.model.course.dto.CourseDto;
 import com.a08r.restfulapimvc.services.ICourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +24,7 @@ public class CourseController {
     }
 
     @GetMapping(path ="/{courseId}" )
-    public ResponseEntity<CourseDto> findByCourseById(@PathVariable Long courseId){
+    public ResponseEntity<CourseDto> findCourseById(@PathVariable Long courseId){
         return this.iCourseService.findById(courseId);
 
     }

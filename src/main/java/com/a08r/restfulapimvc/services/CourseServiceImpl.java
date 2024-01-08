@@ -2,10 +2,10 @@ package com.a08r.restfulapimvc.services;
 
 
 import com.a08r.restfulapimvc.errors.RecordNotFoundException;
-import com.a08r.restfulapimvc.modle.course.Course;
-import com.a08r.restfulapimvc.modle.course.dto.CourseDto;
-import com.a08r.restfulapimvc.modle.mapper.CourseMapperImp;
-import com.a08r.restfulapimvc.modle.mapper.ICourseMapper;
+import com.a08r.restfulapimvc.model.course.Course;
+import com.a08r.restfulapimvc.model.course.dto.CourseDto;
+import com.a08r.restfulapimvc.model.mapper.CourseMapperImp;
+import com.a08r.restfulapimvc.model.mapper.ICourseMapper;
 import com.a08r.restfulapimvc.repositores.ICourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

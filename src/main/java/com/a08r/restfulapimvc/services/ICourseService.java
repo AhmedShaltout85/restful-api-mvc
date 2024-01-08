@@ -1,7 +1,7 @@
 package com.a08r.restfulapimvc.services;
 
 
-import com.a08r.restfulapimvc.modle.course.dto.CourseDto;
+import com.a08r.restfulapimvc.model.course.dto.CourseDto;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

@@ -1,6 +1,6 @@
-package com.a08r.restfulapimvc.modle.course;
+package com.a08r.restfulapimvc.model.course;
 
-import com.a08r.restfulapimvc.modle.BaseEntity;
+import com.a08r.restfulapimvc.model.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

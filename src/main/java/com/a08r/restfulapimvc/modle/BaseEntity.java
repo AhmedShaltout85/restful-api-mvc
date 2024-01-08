@@ -1,4 +1,4 @@
-package com.a08r.restfulapimvc.modle;
+package com.a08r.restfulapimvc.model;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
