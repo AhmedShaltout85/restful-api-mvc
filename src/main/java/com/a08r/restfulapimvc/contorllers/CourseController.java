@@ -1,6 +1,6 @@
 package com.a08r.restfulapimvc.contorllers;
 
-import com.a08r.restfulapimvc.model.course.dto.CourseDto;
+import com.a08r.restfulapimvc.modle.course.dto.CourseDto;
 import com.a08r.restfulapimvc.services.ICourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
