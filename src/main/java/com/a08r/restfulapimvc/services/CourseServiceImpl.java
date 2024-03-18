@@ -2,11 +2,12 @@ package com.a08r.restfulapimvc.services;
 
 
 import com.a08r.restfulapimvc.errors.RecordNotFoundException;
-import com.a08r.restfulapimvc.model.course.Course;
-import com.a08r.restfulapimvc.model.course.dto.CourseDto;
-import com.a08r.restfulapimvc.model.mapper.CourseMapperImp;
-import com.a08r.restfulapimvc.model.mapper.ICourseMapper;
+import com.a08r.restfulapimvc.modle.course.Course;
+import com.a08r.restfulapimvc.modle.course.dto.CourseDto;
+import com.a08r.restfulapimvc.modle.mapper.CourseMapperImp;
+import com.a08r.restfulapimvc.modle.mapper.ICourseMapper;
 import com.a08r.restfulapimvc.repositores.ICourseRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +21,7 @@ import java.util.stream.Collectors;
 @Service
 public class CourseServiceImpl implements ICourseService {
     private final ICourseRepository iCourseRepository;
-    private static final ICourseMapper mI_COURSE_MAPPER = new CourseMapperImp();
+    private static final ICourseMapper mI_COURSE_MAPPER = (ICourseMapper) new CourseMapperImp();
 
     @Autowired
     public CourseServiceImpl(ICourseRepository iCourseRepository) {
@@ -37,6 +38,7 @@ public class CourseServiceImpl implements ICourseService {
                 .stream()
                 .map(mI_COURSE_MAPPER::courseToCourseDto)
                 .collect(Collectors.toList());
+
         return new ResponseEntity<>(courseDtoList, HttpStatus.OK);
     }
 

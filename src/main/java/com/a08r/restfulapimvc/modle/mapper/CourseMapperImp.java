@@ -1,10 +1,10 @@
-package com.a08r.restfulapimvc.model.mapper;
+package com.a08r.restfulapimvc.modle.mapper;
 
 
-import com.a08r.restfulapimvc.model.course.Course;
-import com.a08r.restfulapimvc.model.course.dto.CourseDto;
+import com.a08r.restfulapimvc.modle.course.Course;
+import com.a08r.restfulapimvc.modle.course.dto.CourseDto;
 
-public class CourseMapperImp implements ICourseMapper{
+public class CourseMapperImp implements com.a08r.restfulapimvc.modle.mapper.ICourseMapper {
     @Override
     public Course CourseDtoToCourse(CourseDto CourseDto) {
         Course course = new Course();
