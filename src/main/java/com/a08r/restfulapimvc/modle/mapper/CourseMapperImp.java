@@ -4,9 +4,9 @@ package com.a08r.restfulapimvc.modle.mapper;
 import com.a08r.restfulapimvc.modle.course.Course;
 import com.a08r.restfulapimvc.modle.course.dto.CourseDto;
 
-public class CourseMapperImp implements com.a08r.restfulapimvc.modle.mapper.ICourseMapper {
+public class CourseMapperImp implements ICourseMapper {
     @Override
-    public Course CourseDtoToCourse(CourseDto CourseDto) {
+    public Course courseDtotocourse(CourseDto CourseDto) {
         Course course = new Course();
         course.setTitle(CourseDto.getTitle());
         course.setDescription(CourseDto.getDescription());

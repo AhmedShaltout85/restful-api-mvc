@@ -7,7 +7,6 @@ import com.a08r.restfulapimvc.modle.course.dto.CourseDto;
 import com.a08r.restfulapimvc.modle.mapper.CourseMapperImp;
 import com.a08r.restfulapimvc.modle.mapper.ICourseMapper;
 import com.a08r.restfulapimvc.repositores.ICourseRepository;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -55,7 +54,7 @@ public class CourseServiceImpl implements ICourseService {
 
     @Override
     public ResponseEntity<CourseDto> create(CourseDto addCourseDto) {
-        final Course course = mI_COURSE_MAPPER.CourseDtoToCourse(addCourseDto);
+        final Course course = mI_COURSE_MAPPER.courseDtotocourse(addCourseDto);
         final  Course createCourse = this.iCourseRepository.save(course);
         CourseDto courseDto = mI_COURSE_MAPPER.courseToCourseDto(createCourse);
         return new ResponseEntity<>(courseDto, HttpStatus.CREATED);
