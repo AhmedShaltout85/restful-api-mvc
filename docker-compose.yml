@@ -21,14 +21,15 @@ services:
     #services- name(spring-boot)
     container_name: spring-boot
     # build: .
-    image: spring/rest-mvc
+    image: spring/rest-mvc #image created before in dockerfile
+    # (MUST PUT DB-CONTAINER NAME INSTEAD OF LOCALHOST TO AVOID ERROR)
     ports:
       - "8080:8080"
     networks:
       - spring-boot-network
       # environment:
-      # - SPRING_PROFILES_ACTIVE=dev
-      # - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/api_courses
+      # - SPRING_PROFILES_ACTIVE=default
+      # - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-sql:5432/api_courses
       # - SPRING_DATASOURCE_USERNAME=postgres
       # - SPRING_DATASOURCE_PASSWORD=password
 
